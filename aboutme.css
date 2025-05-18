@@ -1,0 +1,260 @@
+body { /*background of the website*/
+    background-color: beige;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.nav { /*navigation bar*/
+    justify-content: right;
+    display: flex;
+    width: 100%;
+    height: 90px;
+    line-height: 50px;
+    top: 0;
+    padding: 0;
+    position: center;
+    background-color:rgb(101, 137, 139);
+    box-shadow: 5px 5px 5px rgb(83, 94, 125);
+}
+.logo { /*position of the logo image*/
+    width: 210px;
+    position: absolute;
+    top: -2%;
+    left: 0;
+    padding: 20px;
+    align-items: top;
+}
+.nav ul { /*position of the text in navigation bar*/
+    float: right;
+    list-style-type:none;
+    margin-top: 20px;
+    min-height: 400px;
+    margin-right: 50px;
+    font-size: 20px;
+}
+.nav ul li { /*alignment of text in navigation bar*/
+    display: inline-block;
+    margin-left: 40px;
+}
+.nav ul li a { /*font size and color*/
+    text-decoration: none;
+    color: rgb(46, 69, 87);
+    font-size: 30px;
+}
+.intro h1 { /*position of header, font color, and size*/
+    color: rgb(46, 69, 87);
+    font-size: 30px;
+    position: absolute;
+    top: 18%;
+    left: 44%; 
+}
+.intro p { /*position of paragraph, font color, and size*/
+    color: rgb(46, 69, 87);
+    font-size: 20px;
+    margin-top: 50;
+    text-align: center;
+    width: 950px;
+    position: absolute;
+    top: 38%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+.sound h1{ /*position of header, font color, and size*/
+    color: rgb(46, 69, 87);
+    font-size: 30px;
+    position: absolute;
+    top: 58%;
+    left: 43%; 
+}
+.btn { /*button color, size, position*/
+    display:inline-block;  
+    background-color: rgb(46, 72, 87);
+    border: none;
+    border-radius: 5px;
+    color: #c6d2dc;
+    padding: 1.5rem 3rem;
+    margin: 1rem;
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    gap: 1 em;
+    transform: translate(120%, 610%);
+}
+.btn:focus {
+    outline: rgb(64, 37, 51);
+}
+.expi h1 { /*position of header, font color, and size*/
+    color: rgb(46, 69, 87);
+    font-size: 30px;
+    position: absolute;
+    top: 95%;
+    left: 44.5%; 
+}
+.border { /*border of automatic slider*/
+    width: 85vmin;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 220%);
+    border: 10px solid rgb(46, 69, 87);
+    box-shadow: 10px 25px 28px rgb(42, 43, 46);
+    overflow: hidden;
+}
+.pic { /*image size and animation*/
+    width: 50%;
+    display: flex;
+    animation: pic 20s infinite;
+}
+img {
+    width: 100%;
+}
+
+@keyframes pic { /*transition of the slider*/
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    15% {
+        transform: translateX(-100%);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    25% {
+        transform: translateX(-200%);
+    }
+    30% {
+        transform: translateX(-200%);
+    }
+    35% {
+        transform: translateX(-300%);
+    }
+    40% {
+        transform: translateX(-300%);
+    }
+    45% {
+        transform: translateX(-400%);
+    }
+    50% {
+        transform: translateX(-400%);
+    }
+    55% {
+        transform: translateX(-500%);
+    }
+    60% {
+        transform: translateX(-500%);
+    }
+    65% {
+        transform: translateX(-600%);
+    }
+    70% {
+        transform: translateX(-600%);
+    }
+    75% {
+        transform: translateX(-700%);
+    }
+    80% {
+        transform: translateX(-700%);
+    }
+    90% {
+        transform: translateX(-800%);
+    }
+    100% {
+        transform: translateX(-800%);
+    }
+}
+
+/*On screen that are 1200px wide or less the button will chage position.*/
+@media screen and (max-width: 1200px) {
+    .btn {
+        float: left;
+        display: table;
+        transform: translate(40%, 630%);
+    }
+}
+
+/*On screen that are 990px wide or less the sa navigation bar, logo, text stay the same.
+However, the btn will change position*/
+@media screen and (max-width: 990px) {
+    .bg {
+        width: 80%;
+        height: 70%;
+    }
+    .intro h1 {
+        left: 40%; 
+    }
+    .intro p {
+        font-size: 20px;
+        width: 800px;
+    }
+    .sound h1{
+        left: 38%; 
+    }
+    .btn {
+        float: left;
+        display: table;
+        transform: translate(15%, 610%);
+    }
+    .expi h1 {
+    left: 40%; 
+    }
+}
+
+/*On screen that are 700px wide or less everything will change it will become smaller.*/
+@media screen and (max-width: 700px) {
+    .bg {
+        width: 60%;
+        height: 60%;
+    }
+    .logo {
+        width: 150px;
+        padding: 15px;
+        top: 0.5%;
+    }
+    .nav ul {
+        margin-top: 20px;
+        min-height: 400px;
+        margin-right: 10px;
+    }
+    .nav ul li {
+        margin-left: 20px;
+    }
+    .nav ul li a {
+        font-size: 15px;
+        bottom: -5%;
+        margin-left: -3%;
+    }
+    .intro h1 {
+        left: 35%; 
+    }
+    .intro p {
+        font-size: 15px;
+        margin-top: 50;
+        text-align: center;
+        width: 450px;
+        position: absolute;
+        top: 38%;
+        left: 50%; 
+        transform: translate(-50%, -50%);
+    }
+    .sound h1{
+        top: 55%;
+        left: 30%; 
+    }
+    .btn {
+        float: left;
+        display:list-item;
+        transform: translate(40%, 550%);
+    }
+    .expi h1 {
+    font-size: 30px;
+    position: absolute;
+    top: 115%;
+    left: 30.5%; 
+    }
+    .border {
+        transform: translate(-50%, 360%);
+    }
+}

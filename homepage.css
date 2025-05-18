@@ -1,0 +1,112 @@
+* { 
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.home { /*background of the website*/
+    width: 100%;
+    height: 100vh;
+    padding: 0 5%;
+    position: relative;
+    background-image: linear-gradient(rgba(216, 214, 165, 0.3),rgba(76, 71, 38, 0.3));
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+nav { /*navigation bar*/
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: top;
+    justify-content: space-around;
+    height: 90px;
+    line-height: 50px;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    background-color:rgba(255, 255, 255, 0.893);
+    box-shadow: 5px 5px 5px rgb(73, 76, 85);
+}
+nav .logo { /*position of the logo in navigation bar*/
+    width: 250px;
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    padding: 20px;
+    align-items: top;
+}
+nav ul { /*position of the text in navigation bar*/
+    float: right;
+    position: absolute;
+    margin-top: 15px;
+    min-height: 400px;
+    right: 4%;
+}
+nav ul li { /*alignment of text in navigation bar*/
+    display: inline-block;
+    margin-left: 42.3px;
+}
+nav ul li a { /*font size and color*/
+    text-decoration: none;
+    color: rgb(46, 69, 87);
+    font-size: 30px;
+}
+.bg { /*position of the background video*/
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/*On screen that are 992px wide or less the sa navigation bar, logo, text stay the same.*/
+@media screen and (max-width: 992px) {
+    .bg {
+        width: 80%;
+        height: 80%;
+    }
+
+    .nav {
+        width: 80%;
+        height: 70%;
+    }   
+    nav .logo {
+        width: 200px;
+        padding: 15px;
+        bottom: -5%;
+    }
+    nav ul li a {
+    font-size: 25px;
+    bottom: -5%;
+}
+}
+
+/*On screen that are 700px wide or less the sa navigation bar, logo, and text change their size.*/
+@media screen and (max-width: 700px) {
+    .bg {
+        width: 60%;
+        height: 60%;
+    }
+
+    .nav {
+        width: 80%;
+        height: 70%;
+    }
+    nav .logo {
+        width: 180px;
+        padding: 15px;
+        top: 5%;
+    }
+    nav ul {
+    right: 1%;
+    }
+    nav ul li {
+    margin-left: 27px;
+    }
+    nav ul li a {
+    font-size: 15px;
+    bottom: -5%;
+    margin-left: -15%;
+    }
+}
